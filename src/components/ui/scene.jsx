@@ -1,18 +1,13 @@
 'use client'
 
 import * as THREE from 'three'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, addEffect } from '@react-three/fiber'
 import { Preload, View } from '@react-three/drei'
 import Lenis from '@studio-freight/lenis'
 
+// Use lenis smooth scroll
 const lenis = new Lenis()
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
+addEffect((t) => lenis.raf(t))
 
 export default function Scene({ style, ...props }) {
   return (

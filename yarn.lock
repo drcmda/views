@@ -253,6 +253,11 @@
     suspend-react "^0.1.3"
     zustand "^3.7.1"
 
+"@studio-freight/lenis@^1.0.33":
+  version "1.0.33"
+  resolved "https://registry.yarnpkg.com/@studio-freight/lenis/-/lenis-1.0.33.tgz#7aeb883c820505e25b25e9337c5b12ac356ed1c9"
+  integrity sha512-Pfoimwwsf8oVuneQg3KoigUDlo1S+rE+m2Tz7b+zMNAEi0UAhox+PG/ksLHa8ktQhlsuWODeQFCl8VHBxqOtfw==
+
 "@swc/helpers@0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.2.tgz#85ea0c76450b61ad7d10a37050289eded783c27d"

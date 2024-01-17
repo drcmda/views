@@ -3,6 +3,16 @@
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
 import { Preload, View } from '@react-three/drei'
+import Lenis from '@studio-freight/lenis'
+
+const lenis = new Lenis()
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
 
 export default function Scene({ style, ...props }) {
   return (

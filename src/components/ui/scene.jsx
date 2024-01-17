@@ -1,6 +1,5 @@
 'use client'
 
-import * as THREE from 'three'
 import { Canvas, addEffect } from '@react-three/fiber'
 import { Preload, View } from '@react-three/drei'
 import Lenis from '@studio-freight/lenis'
@@ -12,6 +11,7 @@ addEffect((t) => lenis.raf(t))
 export default function Scene({ style, ...props }) {
   return (
     <Canvas
+      shadows
       style={{
         position: 'fixed',
         top: 0,
@@ -23,9 +23,7 @@ export default function Scene({ style, ...props }) {
       }}
       eventSource={document.body}
       eventPrefix='client'
-      shadows
-      {...props}
-      onCreated={(state) => (state.gl.toneMapping = THREE.AgXToneMapping)}>
+      {...props}>
       <View.Port />
       <Preload all />
     </Canvas>

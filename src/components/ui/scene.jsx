@@ -5,7 +5,7 @@ import { Preload, View } from '@react-three/drei'
 import Lenis from '@studio-freight/lenis'
 
 // Use lenis smooth scroll
-const lenis = new Lenis()
+const lenis = new Lenis({ syncTouch: true })
 addEffect((t) => lenis.raf(t))
 
 export default function Scene({ style, ...props }) {
